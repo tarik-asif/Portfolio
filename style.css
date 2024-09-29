@@ -1,0 +1,367 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 10%;
+}
+.nav-name{
+    font-family: "Sofadi One", system-ui;
+    text-align: center;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.nav-link{
+    display: flex;
+    flex-direction: column;
+}
+.nav-link a{
+    background-color: rgb(4, 71, 71);
+    border-radius: 10px;
+    margin: 7px;
+    padding: 7px;
+}
+.nav-link a:hover{
+    background-color: gray;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+/*mobile*/
+[class*="col-"]{
+    width: 100%;
+}
+.nav-header{
+    background-color: teal;
+    padding: 1% 7%;
+    text-align: center;
+}
+.nav-header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* end Nav header */
+
+/* start profile */
+.profile{
+    padding: 130px 10px;
+    text-align: center;
+    position: relative;
+}
+.profile .top{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 120px;
+    border-radius: 50%;
+    transition: transform 3s;
+}
+.profile .top:hover{
+    transform: rotate(360deg);
+}
+
+.profile-det h1{
+    font-family: "Sofadi One", system-ui;
+}
+.profile-det p{
+    color:rgb(85, 83, 87);
+    width: 90%;
+    margin: 0 auto 0 20px;
+    font-size: 1.1rem;
+}
+.profile .bottom{
+    position: absolute;
+    left: 10px;
+    border-radius: 50%;
+    transition: transform 3s;
+}
+.profile .bottom:hover{
+    transform: rotate(360deg);
+}
+
+/* profile-end */
+
+/* about-start */
+.about{
+    text-align: center;
+    background-color: rgb(64, 114, 99);
+    color: antiquewhite;
+    border-radius: 5px;
+    padding: 1% 7%;
+}
+.about h1{
+    padding: 10px;
+}
+.about-image img{
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.about-det p{
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+.dotted-hr{
+    border: dotted 5px white;
+    border-bottom: none;
+    width: 70px;
+    margin: 35px auto;
+}
+.dotted-hrr{
+    border: dotted 5px white;
+    border-bottom: none;
+    width: 70px;
+    margin: 35px auto;
+}
+.dotted-hhr{
+    border: dotted 5px white;
+    border-bottom: none;
+    width: 70px;
+    margin: 35px auto;
+}
+.dotted-hd{
+    width: 60%;
+    margin: 15px auto;
+}
+.cv{
+    border: 2px solid rgb(64, 114, 99);
+    background-color: gray;
+    color: antiquewhite;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.about{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* about-end */
+
+/* professional-experiment start*/
+.professional-exp{
+    padding: 2% 6%;
+}
+.professional-exp .card{
+    background-color:rgb(194, 187, 187);
+    border-radius: 5px;
+    padding: 10px;
+    /* height: 600px; */
+    width: 450px;
+    transform: 0.3s;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 4px black;
+}
+.professional-exp::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.card-title h2{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(92, 90, 90);
+    color: white;
+    padding: 5px;
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon img{
+    padding: 1%;
+    height: 100px; 
+}
+.card-iconn{
+    text-align: center;
+}
+.card-iconn img{
+    padding: 1%;
+    height: 100px;
+    width: 100px; 
+}
+.skill-contain{
+    padding-right: 10px;
+}
+.skill-contain li{
+    margin: 40px 0 ;
+    list-style: none;
+    font-weight: bolder;
+    position: relative;
+}
+.skill-contain li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 10px);
+    width: 100%;
+    height: 15px;
+    background-color: rgb(161, 108, 211);
+    border-radius: 1000px;
+}
+.skill-contain li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: rgb(121, 51, 202);
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.skill-contain li.html::after{
+    animation-name: html;
+}
+@keyframes html {
+    to{
+        width: 90%;
+    }
+}
+.skill-contain li.css::after{
+    animation-name: css;
+}
+@keyframes css {
+    to{
+        width: 75%;
+    }
+}
+.skill-contain li.js::after{
+    animation-name: js;
+}
+@keyframes js {
+    to{
+        width: 70%;
+    }
+}
+.skill-contain li.php::after{
+    animation-name: php;
+}
+@keyframes php {
+    to{
+        width: 75%;
+    }
+}
+.skill-contain li.java::after{
+    animation-name: java;
+}
+@keyframes java {
+    to{
+        width: 80%;
+    }
+}
+.skill-contain li.c::after{
+    animation-name: c;
+}
+@keyframes c {
+    to{
+        width: 70%;
+    }
+}
+.skill-contain::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+/* professional-experiment end*/
+
+/* Achievement-contact start */
+
+.achievements-contact{
+    padding: 1% 7%;
+    background-color:rgb(70, 170, 138);
+    color: white;
+    border-radius: 5px;
+}
+.achievements-contact h3{
+    text-align: center;
+    color: black;
+}  
+.achievements-contact p{
+    text-align: center; 
+    padding: 5px;
+    font-weight: bolder;
+}
+.achievements-contact::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.dotted-hh{
+    border: dotted 5px white;
+    border-bottom: none;
+    width: 70px;
+    margin: 25px 100px;
+}
+.contact{
+    padding: 1% 7%;
+    text-align: center;
+}
+.contact input, textarea{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.contact button{
+    border: none;
+    border-radius: 10%;
+    background-color: rgb(17, 75, 57);
+    color: white;
+    padding: 7px;
+    margin: 10px;
+}
+.contact-link{
+    text-align: center;
+}
+.media-button .btn{
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    height: 50px;
+}
+.btn:hover{
+    background-color: gray;
+}
+/* Achievements-Contacts-link Ends here */
+
+/* footer-starts here */
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.footer-menu a{
+    display: block;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+.footer-menu a:hover{
+    color: gray;
+}
